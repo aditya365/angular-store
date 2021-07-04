@@ -9,6 +9,10 @@ import { CounterOutputComponent } from './counter/counter-output/counter-output.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { counterReducer } from './counter/state/counter.reducer';
 import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { CustomCounterComponent } from './counter/custom-counter/custom-counter.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,13 +20,17 @@ import {MatButtonModule} from '@angular/material/button';
     AppComponent,
     CounterComponent,
     CounterButtonsComponent,
-    CounterOutputComponent
+    CounterOutputComponent,
+    CustomCounterComponent
   ],
   imports: [
     BrowserModule,
     StoreModule.forRoot({ counter: counterReducer }),
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
